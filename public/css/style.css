@@ -41,7 +41,6 @@ body {
   font-size: 236px;
   font-weight: 200;
   margin: 0px;
-  color: #211b19;
   text-transform: uppercase;
   position: absolute;
   left: 50%;
@@ -72,18 +71,18 @@ body {
   display: inline-block;
   font-weight: 700;
   text-decoration: none;
-  color: #fff;
+  color: rgb(39, 39, 43);
   text-transform: uppercase;
   padding: 13px 23px;
-  background: #ff6300;
+  background: #ff004c5e;
   font-size: 18px;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 
 .notfound a:hover {
-  color: #ff6300;
-  background: #211b19;
+  color: #500663;
+  background: #ce57c8;
 }
 
 @media only screen and (max-width: 767px) {
