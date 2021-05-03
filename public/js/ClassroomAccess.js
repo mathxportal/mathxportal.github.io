@@ -27,9 +27,8 @@ firebase.auth().onAuthStateChanged(async function(user){
         for (x in doc.data()) {
             const li = `
             <li>
-                <div>${x}</div>
-                
-                <div>${doc.data()[x]}</div>
+                <div style="color:#800080; padding-bottom: 300px">${x}</div>
+                <div style="color:#082c6c">${doc.data()[x]}</div>
             </li>
             `;
             html += li;
