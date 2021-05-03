@@ -25,6 +25,7 @@ function signUp(event){
 
     const promise = firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
 
+    var UUID = firebase.auth().currentUser.uid
     var userRef = firebase.firestore().collection('SignedUpClasses').doc(UUID)
     
     userRef.set({
@@ -32,6 +33,5 @@ function signUp(event){
     }, {merge: true})
 
     promise.catch(e => alert(e.message))
-    var UUIDUSER = firebase.auth().currentUser.uid
 
 }
