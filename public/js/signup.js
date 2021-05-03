@@ -21,17 +21,17 @@ function signUp(event){
     var password = document.getElementById("password")
     console.log(email.value, password.value)
     
+    
+
     const promise = firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+
+    var userRef = firebase.firestore().collection('SignedUpClasses').doc(UUID)
+    
+    userRef.set({
+      General: "Student",
+    }, {merge: true})
+
     promise.catch(e => alert(e.message))
-    .then((userCredential) => {
-        var user = userCredential.user;
-        console.log(user)
-        var UUIDUSER = firebase.auth().currentUser.uid
-        console.log(UUIDUSER)
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ..
-  });
+    var UUIDUSER = firebase.auth().currentUser.uid
+
 }
