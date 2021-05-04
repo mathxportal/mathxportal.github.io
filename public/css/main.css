@@ -860,3 +860,7 @@ iframe {
 }
 
 .tab { margin-left: 40px; }
+
+.boxed {
+  border: 1px solid green ;
+}
