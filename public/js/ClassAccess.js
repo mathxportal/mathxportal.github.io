@@ -16,6 +16,10 @@ var Submit = document.getElementById("Submission")
 Submit.addEventListener("click", SubmitStream)
 
 
+
+var TextSubmission = document.getElementById("TextSubmission")
+TextSubmission.addEventListener("click", UnhideSubmit)
+
 var app = firebase.initializeApp(firebaseConfig);
 
 console.log(queryString)
@@ -26,10 +30,11 @@ var queries = queryString.split("?");
 // {
 //   console.log(queries[i])
 // }
+//TODO
+
 
 function SubmitStream(event) {
   event.preventDefault()
-  var TextSubmission = document.getElementById("TextSubmission")
   var useremail = firebase.auth().currentUser.email
   var today = new Date();
   var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
@@ -40,6 +45,10 @@ function SubmitStream(event) {
   userRef.set({
     [SubmissionID]: TextSubmission.value,
   }, {merge: true})
+}
+
+function UnhideSubmit(event){
+  Submit.style.display="block";
 }
 
 const Stream = firebase.firestore().collection('Classes').doc(queries[1]).get().then(function(doc) {
