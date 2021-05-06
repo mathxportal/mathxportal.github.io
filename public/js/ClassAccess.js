@@ -15,8 +15,6 @@ const classStream = document.getElementById('classMessages')
 var Submit = document.getElementById("Submission")
 Submit.addEventListener("click", SubmitStream)
 
-
-
 var TextSubmission = document.getElementById("TextSubmission")
 TextSubmission.addEventListener("click", UnhideSubmit)
 
@@ -59,7 +57,7 @@ const Stream = firebase.firestore().collection('Classes').doc(queries[1]).get().
     const li = `
     <div>
       <h3>${x}</h3>
-      <h3>${doc.data()[x]}
+      <h3>${doc.data()[x]}</h3>
     </div>
     `
     StreamMessages += li;
