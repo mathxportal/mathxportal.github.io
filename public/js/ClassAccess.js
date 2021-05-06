@@ -71,7 +71,7 @@ const Stream = firebase.firestore().collection('Classes').doc(queries[1]).get().
       <div>
         <h3>${Text[0]}</h3>
         <h3>${Text[1]}</h3>
-        <a href="reply.html?${Text[2]}">Click to reply</a>
+        <a href="reply.html?${Text[2]}?${Text[1]}?${Text[0]}?${firebase.auth().currentUser.email}">Click to reply</a>
       </div>
       `
       StreamMessages += li;
