@@ -35,13 +35,15 @@ function SubmitStream(event) {
   event.preventDefault()
   var useremail = firebase.auth().currentUser.email
   var today = new Date();
+  var Array = new Uint32Array(1);
+  window.crypto.getRandomValues(Array);
   var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  var SubmissionID = useremail + ' ' + date + ' ' + time;
+  var SubmissionID = date + ' ' + time +  ' ' + useremail;
   var userRef = firebase.firestore().collection('Classes').doc(queries[1])
 
   userRef.set({
-    [SubmissionID]: TextSubmission.value,
+    [SubmissionID + '?' + TextSubmission.value + '?' + Array]: TextSubmission.value,
   }, {merge: true})
 }
 
@@ -53,14 +55,26 @@ const Stream = firebase.firestore().collection('Classes').doc(queries[1]).get().
   console.log(doc.id, " => ", doc.data())
   var x;
   let StreamMessages = '';
+  var MessagesArray = [];
   for (x in doc.data()) {
-    const li = `
-    <div>
-      <h3>${x}</h3>
-      <h3>${doc.data()[x]}</h3>
-    </div>
-    `
-    StreamMessages += li;
+
+    MessagesArray.push(x)
+    
+  }
+  MessagesArray.sort()
+    console.log(MessagesArray.reverse())
+    var y;
+    for (y in MessagesArray) {
+      console.log(MessagesArray[y])
+      var Text = MessagesArray[y].split('?')
+      const li = `
+      <div>
+        <h3>${Text[0]}</h3>
+        <h3>${Text[1]}</h3>
+        <a href="reply.html?${Text[2]}">Click to reply</a>
+      </div>
+      `
+      StreamMessages += li;
   }
 
   classStream.innerHTML = StreamMessages
