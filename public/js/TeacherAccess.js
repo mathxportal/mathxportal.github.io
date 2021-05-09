@@ -28,6 +28,11 @@ firebase.auth().onAuthStateChanged(async function(user){
                 color: #141714;
                 font-family: Itim;
                 font-size: 24px;
+                text-decoration: none;
+              }
+              a:hover {
+                text-decoration: Underline;
+                margin: auto;
               }
             </style>           
             <div>
