@@ -27,3 +27,28 @@
     background-color: #00aa1c;
     color: rgb(0, 0, 0);
   }
+.text-enter {
+  margin:auto; 
+  width: 100%; 
+  background-color: rgb(100, 25, 197);  
+  height: 200px; 
+  border-radius: 20px;
+  margin-top: 70px;
+  text-align: center;
+}
+  .class-body {
+    margin: auto;
+    width: 80%;
+    padding: 10px;    
+  }
+  .submit-button {
+    margin:auto; 
+    width: 10%; 
+    background-color: rgb(197, 25, 197); 
+    border-radius: 5px; 
+    margin-top: 20px;
+    height: 60px; 
+    display: none; 
+    padding:0px;
+    text-align: auto;
+  }

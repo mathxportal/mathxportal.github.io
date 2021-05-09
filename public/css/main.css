@@ -387,7 +387,8 @@ iframe {
     }
 
     #sidebar nav a:hover {
-      color: rgba(255, 255, 255, 0.55);
+      border-width: 5px;
+      border-color: blue;
     }
 
     #sidebar nav a.active {
@@ -750,7 +751,9 @@ iframe {
   background: #333333;
 }
 
-
+.submit-button {
+  background-color: rgb(5, 32, 32);
+}
 
 /*------------------------------------------------------------------
 [ Responsive ]*/

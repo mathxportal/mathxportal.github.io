@@ -14,8 +14,24 @@ firebase.auth().onAuthStateChanged(async function(user){
         var queryString = "TeacherSettings.html" + "?" + UUID + "?" + queries[1];
         if(status == "Teacher"){
             const li = `
+            <style>
+            @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+            .button-center {
+                margin: auto;
+                width: 100%;
+                background-color: #65279c;
+                padding-bottom: 10px;
+                padding-top: 40px;
+
+              }
+              a {
+                color: #141714;
+                font-family: Itim;
+                font-size: 24px;
+              }
+            </style>           
             <div>
-                <button id="SettingsforStaff"> 
+                <button id="SettingsforStaff" class="button-center"> 
                     <a href="${queryString}">
                         Staff Settings
                     </a>
