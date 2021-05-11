@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard</title>
+    <link rel="shortcut icon" href="https://www.jotform.com/uploads/Viderman/form_files/logo.6086ef0f45ee48.54055037.png" />
+    <title>New Course | MATHx Portal</title>
+
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
@@ -36,9 +38,18 @@
     <link type="text/css" href="assets/css/vendor-flatpickr-airbnb.css" rel="stylesheet">
     <link type="text/css" href="assets/css/vendor-flatpickr-airbnb.rtl.css" rel="stylesheet">
 
-    <!-- Vector Maps -->
-    <link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+    <!-- Quill Theme -->
+    <link type="text/css" href="assets/css/vendor-quill.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-quill.rtl.css" rel="stylesheet">
 
+    <!-- Dropzone -->
+    <link type="text/css" href="assets/css/vendor-dropzone.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-dropzone.rtl.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="assets/css/vendor-select2.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-select2.rtl.css" rel="stylesheet">
+    <link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
 
 
 </head>
@@ -76,7 +87,7 @@
 
 
 
-
+                                <!---->
                                 <div class="navbar-collapse collapse" id="navbarsExample03">
                                     <ul class="nav navbar-nav">
                                         <!--
@@ -324,305 +335,191 @@
                 <div class="mdk-header-layout__content mdk-header-layout__content--fullbleed mdk-header-layout__content--scrollable page" style="padding-top: 60px;">
 
 
-
-
-
-                    <div class="page__heading">
+                    <div class="page__heading border-bottom">
                         <div class="container-fluid page__container">
-                            <h1 class="mb-0">Dashboard</h1>
+                            <h1>Create a New Course</h1>
+                            <p class="lead text-light-gray mb-0">MATHx Teacher Portal</p>
                         </div>
                     </div>
-                    <div class="bg-white border-bottom mb-3">
-                        <div class="container-fluid nav nav-tabs" role="tablist">
-                            <a href="#activity_all" class="active" data-toggle="tab" role="tab" aria-controls="activity_all" aria-selected="true">Overview</a>
-                            <a href="#activity_purchases" data-toggle="tab" role="tab" aria-selected="false">Pricing</a>
-                        </div>
-                    </div>
+
                     <div class="container-fluid page__container">
-                        <div class="tab-content">
-                            <div class="tab-pane active show fade" id="activity_all">
-                                <!-- FIRST TAB CONTENT -->
-                                <div class="row card-group-row">
-                                    <div class="col-lg-4 col-md-6 card-group-row__col">
-                                        <div class="card card-group-row__card">
-                                            <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
-                                                <div class="flex">
-                                                    <div class="card-header__title text-muted mb-2 d-flex">Current Month <span class="badge badge-warning ml-2">391</span></div>
-                                                    <span class="h4 m-0">&dollar;24,000 <small class="text-muted"> / &dollar;50,000</small> </span>
-                                                </div>
-                                                <div><i class="material-icons icon-muted icon-40pt ml-3">monetization_on</i></div>
-                                            </div>
-                                            <div class="progress" style="height: 3px;">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 card-group-row__col">
-                                        <div class="card card-group-row__card">
-                                            <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
-                                                <div class="flex">
-                                                    <div class="card-header__title text-muted d-flex mb-2">Current Year <span class="badge badge-primary ml-2">2019</span></div>
-                                                    <span class="h4 m-0">&dollar;48,229 </span>
-                                                </div>
-                                                <div><i class="material-icons icon-muted icon-40pt ml-3">gps_fixed</i></div>
-                                            </div>
-                                            <div class="progress" style="height: 3px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 card-group-row__col">
-                                        <div class="card card-group-row__card">
-                                            <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
-                                                <div class="flex">
-                                                    <div class="card-header__title text-muted mb-2">Top Grossing</div>
-
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="h4 m-0">&dollar;13,531 </div>
-                                                        <div class="progress ml-1" style="width:100%;height: 3px;">
-                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div><i class="material-icons icon-muted icon-40pt ml-3">contacts</i></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Default Forms</strong></p>
+                                    <p class="text-muted">Stack supports all of Bootstrap's default form styling in addition to a handful of new input types and features. Please <a href="https://getbootstrap.com/docs/4.1/components/forms/" target="_blank">read the official documentation</a> for a full list of options from Bootstrap's core library.</p>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="card">
-                                            <div class="card-header card-header-large bg-light d-flex align-items-center">
-                                                <div class="flex">
-                                                    <h4 class="card-header__title">Earnings</h4>
-                                                    <div class="card-subtitle text-muted">Your recent courses</div>
-                                                </div>
-                                                <div class="ml-auto">
-                                                    <a href="author-earnings.html" class="btn btn-light">Browse All</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="card-body">
-
-                                                <div class="chart" style="height: 295px;">
-                                                    <canvas id="viewsChart">
-                                                        <span style="font-size: 1rem;"><strong>Views</strong> area chart goes here.</span>
-                                                    </canvas>
-                                                </div>
-                                            </div>
+                                <div class="col-lg-8 card-form__body card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Your email:</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address ..">
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-
-                                        <div class="card">
-                                            <div class="card-header card-header-large bg-light d-flex align-items-center">
-                                                <div class="flex">
-                                                    <h4 class="card-header__title">Rankings</h4>
-                                                    <div class="card-subtitle text-muted">Current Month Earnings</div>
-                                                </div>
-
-                                                <div class="dropdown ml-auto">
-                                                    <a href="#" class="dropdown-toggle text-muted" data-caret="false" data-toggle="dropdown">
-                                                        <i class="material-icons">more_vert</i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="#">Go to Report</a>
-                                                        <a class="dropdown-item" href="#">Other Statistics</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item text-danger" href="#">Archive</a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-
-                                            <ul class="list-group list-rankings">
-
-                                                <li class="list-group-item">
-                                                    <div class="media align-items-center">
-                                                        <span class="mr-2">1.</span>
-                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg" class="img-fluid rounded-circle mr-2" width="30" alt="...">
-                                                        <div class="media-body">
-                                                            <a href="#">Tara Knows</a>
-                                                        </div>
-                                                        <div>&dollar;29,021</div>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    <div class="media align-items-center">
-                                                        <span class="mr-2">2.</span>
-                                                        <img src="assets/images/256_jeremy-banks-798787-unsplash.jpg" class="img-fluid rounded-circle mr-2" width="30" alt="...">
-                                                        <div class="media-body">
-                                                            <a href="#">Karen Smith</a>
-                                                        </div>
-                                                        <div>&dollar;25,250</div>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    <div class="media align-items-center">
-                                                        <span class="mr-2">3.</span>
-                                                        <img src="assets/images/256_michael-dam-258165-unsplash.jpg" class="img-fluid rounded-circle mr-2" width="30" alt="...">
-                                                        <div class="media-body">
-                                                            <a href="#">Mark Ups</a>
-                                                        </div>
-                                                        <div>&dollar;21,330</div>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    <div class="media align-items-center">
-                                                        <span class="mr-2">4.</span>
-                                                        <img src="assets/images/256_s-a-r-a-h-s-h-a-r-p-764291-unsplash.jpg" class="img-fluid rounded-circle mr-2" width="30" alt="...">
-                                                        <div class="media-body">
-                                                            <a href="#">Steven Short</a>
-                                                        </div>
-                                                        <div>&dollar;17,740</div>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    <div class="media align-items-center">
-                                                        <span class="mr-2">5.</span>
-                                                        <img src="assets/images/256_luke-porter-261779-unsplash.jpg" class="img-fluid rounded-circle mr-2" width="30" alt="...">
-                                                        <div class="media-body">
-                                                            <a href="#">John Mix</a>
-                                                        </div>
-                                                        <div>&dollar;13,120</div>
-                                                    </div>
-                                                </li>
-
-                                            </ul>
-
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Your password:</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password ..">
                                         </div>
-                                    </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
                                 </div>
-                                <!-- END FIRST TAB CONTENT -->
-                            </div>
-                            <div class="tab-pane fade" id="activity_purchases">
-                                <!-- SECOND TAB CONTENT -->
-
-
-
-                                <div class="row card-group-row  pt-2">
-
-                                    <div class="col-md-6 col-lg-4 card-group-row__col">
-                                        <div class="card card-group-row__card pricing__card">
-
-                                            <div class="card-body d-flex flex-column">
-                                                <div class="text-center">
-                                                    <h4 class="pricing__title mb-0">Personal</h4>
-                                                    <div class="d-flex align-items-center justify-content-center border-bottom-2 flex pb-3">
-                                                        <span class="pricing__amount headings-color">29</span>
-                                                        <span class="d-flex flex-column">
-                                                            <span class="pricing__currency text-dark-gray text-left">USD</span>
-                                                            <span class="pricing__duration text-dark-gray">*monthly</span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body d-flex flex-column">
-
-                                                    <ul class="list-unstyled pricing__features">
-
-                                                        <li>HTML/SCSS/JS</li>
-
-                                                        <li>6 Months Support</li>
-
-                                                    </ul>
-
-                                                    <a href="https://www.frontted.com/admins/educate-learning-app-theme" class="btn btn-secondary mt-auto">Purchase Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-4 card-group-row__col">
-                                        <div class="card card-group-row__card pricing__card pricing__card--popular">
-
-                                            <span class="pricing__card-badge">most popular</span>
-
-                                            <div class="card-body d-flex flex-column">
-                                                <div class="text-center">
-                                                    <h4 class="pricing__title mb-0">Developers</h4>
-                                                    <div class="d-flex align-items-center justify-content-center border-bottom-2 flex pb-3">
-                                                        <span class="pricing__amount headings-color">59</span>
-                                                        <span class="d-flex flex-column">
-                                                            <span class="pricing__currency text-dark-gray text-left">USD</span>
-                                                            <span class="pricing__duration text-dark-gray">*monthly</span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body d-flex flex-column">
-
-                                                    <ul class="list-unstyled pricing__features">
-
-                                                        <li>HTML/SCSS/JS</li>
-
-                                                        <li>6 Months Support</li>
-
-                                                        <li>HTML/SCSS/JS</li>
-
-                                                        <li>6 Months Support</li>
-
-                                                    </ul>
-
-                                                    <a href="https://www.frontted.com/admins/educate-learning-app-theme" class="btn btn-primary mt-auto">Purchase Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-4 card-group-row__col">
-                                        <div class="card card-group-row__card pricing__card">
-
-                                            <div class="card-body d-flex flex-column">
-                                                <div class="text-center">
-                                                    <h4 class="pricing__title mb-0">Personal</h4>
-                                                    <div class="d-flex align-items-center justify-content-center border-bottom-2 flex pb-3">
-                                                        <span class="pricing__amount headings-color">199</span>
-                                                        <span class="d-flex flex-column">
-                                                            <span class="pricing__currency text-dark-gray text-left">USD</span>
-                                                            <span class="pricing__duration text-dark-gray">*monthly</span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body d-flex flex-column">
-
-                                                    <ul class="list-unstyled pricing__features">
-
-                                                        <li>HTML/SCSS/JS</li>
-
-                                                        <li>6 Months Support</li>
-
-                                                        <li>HTML/SCSS/JS</li>
-
-                                                        <li>6 Months Support</li>
-
-                                                        <li>HTML/SCSS/JS</li>
-
-                                                        <li>6 Months Support</li>
-
-                                                    </ul>
-
-                                                    <a href="https://www.frontted.com/admins/educate-learning-app-theme" class="btn btn-secondary mt-auto">Purchase Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- END SECOND TAB -->
-                            </div>
-                            <div class="tab-pane fade" id="activity_emails">
-                                Ducimus aperiam aut corporis, facere nobis id quos dignissimos, ut corrupti asperiores reprehenderit culpa praesentium exercitationem, officia commodi.
-                            </div>
-                            <div class="tab-pane fade" id="activity_quotes">
-                                Odit consectetur dolore maxime similique qui officia deserunt fugiat quo tempore consequuntur dicta ratione sint commodi eum eligendi, magnam aliquid expedita quas accusantium, sed nobis tenetur illum mollitia. Quis ipsum tenetur distinctio tempore vitae atque quam.
                             </div>
                         </div>
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Date Picker</strong></p>
+                                    <p class="text-muted">
+                                        A simple yet powerful datepicker powered by Flatpickr. Please read the <a target="_blank" href="https://flatpickr.js.org/">official plugin documentation</a> for a full list of options.
+                                    </p>
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body">
+                                    <div class="form-group">
+                                        <label for="flatpickrSample01">Date</label>
+                                        <input id="flatpickrSample01" type="text" class="form-control" placeholder="Flatpickr example" data-toggle="flatpickr" value="today">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="flatpickrSample02">Range</label>
+                                        <input id="flatpickrSample02" type="text" class="form-control" placeholder="Flatpickr range example" data-toggle="flatpickr" data-flatpickr-mode="range" value="2018-10-07 to 2018-10-15">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Rich Text Editor</strong></p>
+                                    <p class="text-muted">Powerful WYSIWYG text editor powered by Quill. Please read the <a href="https://quilljs.com/" target="_blank">official plugin documentation</a> for a full list of options.</p>
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body">
+                                    <label>Default</label>
+                                    <div class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor">
+                                        <h1>Hello World!</h1>
+                                        <p>Some initial <strong>bold</strong> text</p>
+                                        <p><br></p>
+                                    </div>
+
+                                    <label>Custom toolbar</label>
+                                    <div class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor" data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
+                                        <p>Hello World!</p>
+                                        <p>Some initial <strong>bold</strong> text</p>
+                                        <p><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Drag &amp; Drop File Uploads</strong></p>
+                                    <p class="text-muted">Drag and drop file uploads with image previews powered by Dropzone.js. Please read the <a href="http://www.dropzonejs.com/" target="_blank">official plugin documentation</a> for a full list of options.</p>
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body d-flex align-items-center">
+
+                                    <div class="dropzone dropzone-multiple w-100" data-toggle="dropzone" data-dropzone-multiple data-dropzone-url="http://" data-dropzone-files='["assets/images/avatar/blue.svg", "assets/images/avatar/demi.png", "assets/images/avatar/green.svg"]'>
+
+                                        <div class="fallback">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="customFileUploadMultiple" multiple>
+                                                <label class="custom-file-label" for="customFileUploadMultiple">Choose file</label>
+                                            </div>
+                                        </div>
+
+                                        <ul class="dz-preview dz-preview-multiple list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="form-row align-items-center">
+                                                    <div class="col-auto">
+                                                        <div class="avatar">
+                                                            <img src="assets/images/avatar/blue.svg" class="avatar-img rounded" alt="..." data-dz-thumbnail>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="font-weight-bold" data-dz-name>...</div>
+                                                        <p class="small text-muted mb-0" data-dz-size>...</p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <a href="#" class="text-muted-light" data-dz-remove>
+                                                            <i class="material-icons">close</i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Select</strong></p>
+                                    <p class="text-muted">Customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options powered by Select2. Please read the <a href="https://select2.org/" target="_blank">official plugin documentation</a> for a full list of options.</p>
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body">
+                                    <div class="form-group">
+                                        <label for="select01">Basic</label>
+                                        <select id="select01" data-toggle="select" class="form-control">
+                                            <option selected="">My first option</option>
+                                            <option>Another option</option>
+                                            <option>Third option is here</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="select02">Avatars</label>
+                                        <select id="select02" data-toggle="select" data-minimum-results-for-search="-1" class="form-control">
+                                            <option data-avatar-src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg">
+                                                Adelle Sherley
+                                            </option>
+                                            <option data-avatar-src="assets/images/avatar/demi.png">
+                                                Adrian Demian
+                                            </option>
+                                            <option data-avatar-src="assets/images/avatar/green.svg">
+                                                Green Doe
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="select03">Multiple</label>
+                                        <select id="select03" data-toggle="select" multiple class="form-control">
+                                            <option selected="">CSS</option>
+                                            <option selected="">HTML</option>
+                                            <option>JavaScript</option>
+                                            <option>Bootstrap</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="select04">Large</label>
+                                        <select id="select04" data-toggle="select" multiple class="form-control form-control-lg">
+                                            <option>CSS</option>
+                                            <option>HTML</option>
+                                            <option selected="">JavaScript</option>
+                                            <option>Bootstrap</option>
+                                        </select>
+                                    </div>
+                                    <label for="select05">Small</label>
+                                    <select id="select05" data-toggle="select" class="form-control form-control-sm">
+                                        <option>My first option</option>
+                                        <option>Another option</option>
+                                        <option>Third option is here</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="card card-form">
+    <div class="row no-gutters">
+      <div class="col-lg-4 card-body">
+        <p><strong class="headings-color">Basic Information</strong></p>
+        <p class="text-muted">Edit your account details and settings.</p>
+      </div>
+      <div class="col-lg-8 card-form__body card-body">
+
+      </div>
+    </div>
+  </div> -->
                     </div>
 
 
@@ -972,10 +869,10 @@
     <!-- App Settings FAB -->
     <div id="app-settings">
         <app-settings layout-active="default" :layout-location="{
-      'default': 'index.html',
-      'fixed': 'fixed-index.html',
-      'fluid': 'fluid-index.html',
-      'mini': 'mini-index.html'
+      'default': 'ui-forms.html',
+      'fixed': 'fixed-ui-forms.html',
+      'fluid': 'fluid-ui-forms.html',
+      'mini': 'mini-ui-forms.html'
     }"></app-settings>
     </div>
 
@@ -1014,24 +911,20 @@
     <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
     <script src="assets/js/flatpickr.js"></script>
 
-    <!-- Global Settings -->
-    <script src="assets/js/settings.js"></script>
+    <!-- jQuery Mask Plugin -->
+    <script src="assets/vendor/jquery.mask.min.js"></script>
 
-    <!-- Moment.js -->
-    <script src="assets/vendor/moment.min.js"></script>
-    <script src="assets/vendor/moment-range.js"></script>
+    <!-- Quill -->
+    <script src="assets/vendor/quill.min.js"></script>
+    <script src="assets/js/quill.js"></script>
 
+    <!-- Dropzone -->
+    <script src="assets/vendor/dropzone.min.js"></script>
+    <script src="assets/js/dropzone.js"></script>
 
-    <!-- Chart.js -->
-    <script src="assets/vendor/Chart.min.js"></script>
-
-    <!-- App Charts JS -->
-    <script src="assets/js/chartjs-rounded-bar.js"></script>
-    <script src="assets/js/charts.js"></script>
-
-    <!-- Chart Samples -->
-    <script src="assets/js/page.analytics.js"></script>
-
+    <!-- Select2 -->
+    <script src="assets/vendor/select2/select2.min.js"></script>
+    <script src="assets/js/select2.js"></script>
 
 </body>
 
