@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Open instructor-edit-course.html",
+            "file": "/Users/danviderman/Documents/GitHub/mathxportal.github.io/Portal Template/luma-v2.0.0/Demos/App_Layout_dark/instructor-edit-course.html"
+        }
+    ]
+}
