@@ -17,9 +17,7 @@ var queries = queryString.split("?");
 var ReplyText = document.getElementById("Respond")
 let RespondersEmail = queries[3]
 
-
 var OriginalMessage = document.getElementById("OgMessage")
-
 const ContextMessage = `
 <div><p>${queries[2]}</p></div>
 <div><p>${queries[1]}</p></div>
@@ -50,8 +48,6 @@ const ShowReplies = firebase.firestore().collection('Replies').doc(queries[0]).g
         ReplyMessages += li;
     }
     ReplyMessagesDisplay.innerHTML = ReplyMessages
-    
-
 
 })
 
@@ -75,7 +71,5 @@ function SubmitReply(event) {
         document.location.reload()
     }, 2000)
   }
-
-
 
 OriginalMessage.innerHTML = ContextMessage

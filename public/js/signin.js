@@ -28,7 +28,7 @@ function signIn(event){
         console.log(user)
         var UUIDUSER = firebase.auth().currentUser.uid
         console.log(UUIDUSER)
-        location.href = `classroom.html?email=${email.value}&pass=${password.value}`;
+        location.href = `Dashboard.html?email=${email.value}&pass=${password.value}`;
   })
   .catch((error) => {
     var errorCode = error.code;
