@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Quiz Manager</title>
+    <link rel="shortcut icon" href="https://www.jotform.com/uploads/Viderman/form_files/logo.6086ef0f45ee48.54055037.png" />
+    <title>New Quiz | MATHx Portal</title>
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
@@ -30,7 +31,24 @@
     <link type="text/css" href="assets/css/vendor-ion-rangeslider.rtl.css" rel="stylesheet">
 
 
+    <!-- Flatpickr -->
+    <link type="text/css" href="assets/css/vendor-flatpickr.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-flatpickr.rtl.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-flatpickr-airbnb.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-flatpickr-airbnb.rtl.css" rel="stylesheet">
 
+    <!-- Quill Theme -->
+    <link type="text/css" href="assets/css/vendor-quill.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-quill.rtl.css" rel="stylesheet">
+
+    <!-- Dropzone -->
+    <link type="text/css" href="assets/css/vendor-dropzone.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-dropzone.rtl.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="assets/css/vendor-select2.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-select2.rtl.css" rel="stylesheet">
+    <link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
 
 
 </head>
@@ -317,97 +335,44 @@
 
 
                     <div class="page__heading border-bottom">
-                        <div class="container-fluid page__container d-flex align-items-center">
-                            <h1 class="mb-0">Quiz Manager</h1>
-                            <a href="new-quiz.html" class="btn btn-success ml-auto"><i class="material-icons">add</i> New Quiz</a>
+                        <div class="container-fluid page__container">
+                            <h1>New Quiz</h1>
+                            <p class="lead text-light-gray mb-0">Woop deedoo, you're making an exam. Don't make it too hard tho, no one likes hard exams.</p>
                         </div>
                     </div>
 
                     <div class="container-fluid page__container">
-
-                        <form action="#" class="mb-3 border-bottom">
-                            <div class="form-group form-inline">
-                                <label class="form-label mr-1" for="custom-select">Category</label><br>
-                                <select id="custom-select" class="form-control custom-select" style="width: 200px;">
-                                    <option selected>All categories</option>
-                                    <option value="1">Vue.js</option>
-                                    <option value="2">Node.js</option>
-                                    <option value="3">GitHub</option>
-                                </select>
-                            </div>
-                        </form>
-
-
-
-                        <div class="card-columns">
-
-                            <div class="card">
-                                <div class="card-body media">
-                                    <div class="media-left">
-                                        <a href="#" class="avatar avatar-lg mr-1">
-                                            <img src="assets/images/logos/vuejs.svg" alt="Card image cap" class="avatar-course-img">
-                                        </a>
-                                    </div>
-                                    <div class="media-body align-self-center">
-                                        <h4 class="card-title mb-0"><a href="#">Vue.js Deploy Quiz</a></h4>
-                                        <span class="text-muted">25 Completed</span>
-                                    </div>
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Edit Question</strong></p>
+                                    <p class="text-muted">This is the part that every student dreads. Don't make the question too difficult please! <br><br> Put the question as the header, and the answers as the normal text. </p>
                                 </div>
-                                <div class="card-footer d-flex bg-light">
-                                    <div>
-                                        <a href="#" class="btn btn-light btn-sm">Pending Review <span class="badge badge-soft-secondary ml-1">5</span></a>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="material-icons icon-16pt">edit</i> Edit </a>
+                                <div class="col-lg-8 card-form__body card-body">
+                                    <label>Question</label>
+                                    <div class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor">
+                                        <h1>What is 5+5?</h1>
+                                        <p>15!</p>
+                                        <p><br></p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card">
-                                <div class="card-body media">
-                                    <div class="media-left">
-                                        <a href="#" class="avatar avatar-lg mr-1">
-                                            <img src="assets/images/logos/gitlab.png" alt="Card image cap" class="avatar-course-img">
-                                        </a>
-                                    </div>
-                                    <div class="media-body align-self-center">
-                                        <h4 class="card-title mb-0"><a href="#">GitHub Basic Setup</a></h4>
-                                        <span class="text-muted">410 Completed</span>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex bg-light">
-                                    <div>
-                                        <a href="#" class="btn btn-light btn-sm">Pending Review <span class="badge badge-soft-secondary ml-1">5</span></a>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="material-icons icon-16pt">edit</i> Edit </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-body media">
-                                    <div class="media-left">
-                                        <a href="#" class="avatar avatar-lg mr-1">
-                                            <img src="assets/images/logos/javascript.svg" alt="Card image cap" class="avatar-course-img">
-                                        </a>
-                                    </div>
-                                    <div class="media-body align-self-center">
-                                        <h4 class="card-title mb-0"><a href="#">Javascript for Front-End</a></h4>
-                                        <span class="text-muted">50 Completed</span>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex bg-light">
-                                    <div>
-                                        <a href="#" class="btn btn-light btn-sm">Pending Review <span class="badge badge-soft-secondary ml-1">5</span></a>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="material-icons icon-16pt">edit</i> Edit </a>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+                        <button type="button" class="btn btn-light" style="margin-left: 350px; width: 30%; margin-bottom: 20px;">
+                         New Question
+                        </button>
+
+                        <!-- <div class="card card-form">
+    <div class="row no-gutters">
+      <div class="col-lg-4 card-body">
+        <p><strong class="headings-color">Basic Information</strong></p>
+        <p class="text-muted">Edit your account details and settings.</p>
+      </div>
+      <div class="col-lg-8 card-form__body card-body">
+
+      </div>
+    </div>
+  </div> -->
                     </div>
 
 
@@ -757,10 +722,10 @@
     <!-- App Settings FAB -->
     <div id="app-settings">
         <app-settings layout-active="default" :layout-location="{
-      'default': 'author-quiz-manager.html',
-      'fixed': 'fixed-author-quiz-manager.html',
-      'fluid': 'fluid-author-quiz-manager.html',
-      'mini': 'mini-author-quiz-manager.html'
+      'default': 'ui-forms.html',
+      'fixed': 'fixed-ui-forms.html',
+      'fluid': 'fluid-ui-forms.html',
+      'mini': 'mini-ui-forms.html'
     }"></app-settings>
     </div>
 
@@ -795,7 +760,24 @@
     <script src="assets/js/app-settings.js"></script>
 
 
+    <!-- Flatpickr -->
+    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
 
+    <!-- jQuery Mask Plugin -->
+    <script src="assets/vendor/jquery.mask.min.js"></script>
+
+    <!-- Quill -->
+    <script src="assets/vendor/quill.min.js"></script>
+    <script src="assets/js/quill.js"></script>
+
+    <!-- Dropzone -->
+    <script src="assets/vendor/dropzone.min.js"></script>
+    <script src="assets/js/dropzone.js"></script>
+
+    <!-- Select2 -->
+    <script src="assets/vendor/select2/select2.min.js"></script>
+    <script src="assets/js/select2.js"></script>
 
 </body>
 
