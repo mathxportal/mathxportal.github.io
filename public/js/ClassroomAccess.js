@@ -1,5 +1,5 @@
 const classroom = document.getElementById('class')
-const navclass = document.getElementById('navclass')
+//const navclass = document.getElementById('navclass')
 
 var firebaseConfig = {
     apiKey: "AIzaSyBTxAFBtZV3plHViPvJORHxs3YF2uOuPkI",
@@ -27,13 +27,29 @@ const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get
     for (x in doc.data()) {
         var queryString = "class.html" + "?" + UUID + "?" + x + "?" + doc.data()[x];
         const li = `
-        <div style="border: 2px solid background-color #861657; background-image linear-gradient(326deg, #861657 0%, #ffa69e 74%); background-color: #a4508b; background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%); border-style: ridge; border-length: 20px; border-radius: 10px; padding:10px; padding-bottom:20px; display: inline-grid; width: 31.2%; text-align: center; ">
-            <div >
-                <h2 style="color:#ffffff; padding-bottom: 20px; text-align: center;">${x}</h2>
-                <h3 style="color:#ffffff; text-align: center;">${doc.data()[x]}</h3>
-                <div style="text-align:center;"><button style="background-color: #000000; border-radius: 10px; padding: 5px;"><a href="${queryString}" style="color: #630705; box-shadow:none; text-decoration:none; "> Go To Class </a></button></div>
+        <li class="list-group-item" style="z-index: initial;">
+        <div class="d-flex align-items-center">
+            <a href="#" class="mr-3">
+                <img src="assets/images/logos/vuejs.svg" alt="course" class="">
+
+            </a>
+            <div class="flex">
+                <a href="${queryString}" class="text-body"><strong>${x}</strong></a>
+                <div class="d-flex align-items-center">
+                </div>
+            </div>
+            <div class="dropdown ml-3">
+                <a href="#" class="dropdown-toggle text-muted" data-caret="false" data-toggle="dropdown">
+                    <i class="material-icons">more_vert</i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">View Stats</a>
+                    <a class="dropdown-item" href="#">Proceed</a>
+                    <a class="dropdown-item" href="#">Close</a>
+                </div>
             </div>
         </div>
+    </li>
         `;
         const nav = `
         <a href="${queryString}">${x}</a>
@@ -44,6 +60,6 @@ const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get
         console.log(doc.data()[x])
     }
     classroom.innerHTML = classlist
-    navclass.innerHTML = navlist
+    //navclass.innerHTML = navlist
     })
 })
