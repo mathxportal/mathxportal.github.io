@@ -12,6 +12,10 @@ var firebaseConfig = {
     measurementId: "G-MN57T4VBQL"
   };
 
+
+var Url = decodeURIComponent(window.location.search)
+userinfo = Url.substring(1);
+
 var app = firebase.initializeApp(firebaseConfig);
 
 const setupUI = (user) => {}
@@ -25,7 +29,7 @@ const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get
     let classlist = '';
     let navlist = '';
     for (x in doc.data()) {
-        var queryString = "class.html" + "?" + UUID + "?" + x + "?" + doc.data()[x];
+        var queryString = "student-lessons.html" + "?" + UUID + "?" + x + "?" + doc.data()[x] + "?" + userinfo;
         const li = `
         <li class="list-group-item" style="z-index: initial;">
         <div class="d-flex align-items-center">
