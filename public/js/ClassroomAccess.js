@@ -29,7 +29,8 @@ const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get
     let classlist = '';
     let navlist = '';
     for (x in doc.data()) {
-        var queryString = "student-lessons.html" + "?" + UUID + "?" + x + "?" + doc.data()[x] + "?" + userinfo;
+        if (doc.data()[x] == "Student" || doc.data()[x] == "student" ) { 
+                    var queryString = "student-lessons.html" + "?" + UUID + "?" + x + "?" + doc.data()[x] + "?" + userinfo;
         const li = `
         <li class="list-group-item" style="z-index: initial;">
         <div class="d-flex align-items-center">
@@ -62,6 +63,12 @@ const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get
         navlist += nav;
         console.log(x)
         console.log(doc.data()[x])
+        }
+
+        else {
+            continue;
+        }
+
     }
     classroom.innerHTML = classlist
     //navclass.innerHTML = navlist
