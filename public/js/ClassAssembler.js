@@ -46,8 +46,6 @@ const Assemble = firebase.firestore().collection('ClassID').doc(queries[1]).get(
                 }
             }
 
-            
-            console.log(bolded)
             var othertext = bolded.split("~~~")
             var italic = ''
             var w2 = ''
@@ -61,12 +59,8 @@ const Assemble = firebase.firestore().collection('ClassID').doc(queries[1]).get(
                     italic += othertext[w2]
                 }
             }
-            console.log(italic)
             Description.innerHTML = italic
         }
-
-
-console.log(Desvalue)
     
     }
 })
