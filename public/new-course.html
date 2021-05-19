@@ -373,7 +373,7 @@
                                 <div class="col-lg-8 card-form__body card-body">
                                     <div class="form-group">
                                         <label for="select01">Name your class</label>
-                                        <input class="form-control" placeholder="Sam's Amazing Spectacular Class">
+                                        <input id="CourseName" class="form-control" placeholder="Sam's Amazing Spectacular Class">
                                     </div>
                                 </div>
                             </div>
@@ -484,7 +484,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-block btn-sm btn-info" style="height: 60px; font-size: larger; margin-bottom: 20px;">Create Assignment</button>
+                        <button id="SubmitClass" type="button" class="btn btn-block btn-sm btn-info" style="height: 60px; font-size: larger; margin-bottom: 20px;">Create Class</button>
 
 
                         <!-- <div class="card card-form">
@@ -903,6 +903,10 @@
     <!-- Select2 -->
     <script src="assets/vendor/select2/select2.min.js"></script>
     <script src="assets/js/select2.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+    <script src="js/ClassroomCreation.js"></script>
 
 </body>
 
