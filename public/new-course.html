@@ -342,7 +342,7 @@
                         </div>
                     </div>
 
-                    <div class="container-fluid page__container">
+                    <!--<div class="container-fluid page__container">
                         <div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
@@ -363,6 +363,20 @@
                                     </form>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Course Name</strong></p>
+                                    <p class="text-muted">Give it a nice, nongeneric name</p>
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body">
+                                    <div class="form-group">
+                                        <label for="select01">Name your class</label>
+                                        <input class="form-control" placeholder="Sam's Amazing Spectacular Class">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="card card-form">
                             <div class="row no-gutters">
@@ -374,12 +388,12 @@
                                 </div>
                                 <div class="col-lg-8 card-form__body card-body">
                                     <div class="form-group">
-                                        <label for="flatpickrSample01">Date</label>
-                                        <input id="flatpickrSample01" type="text" class="form-control" placeholder="Flatpickr example" data-toggle="flatpickr" value="today">
+                                        <label for="flatpickrSample01">Planned Start Date</label>
+                                        <input id="PlannedStart" type="text" class="form-control" placeholder="Flatpickr example" data-toggle="flatpickr" value="today">
                                     </div>
                                     <div class="form-group">
-                                        <label for="flatpickrSample02">Range</label>
-                                        <input id="flatpickrSample02" type="text" class="form-control" placeholder="Flatpickr range example" data-toggle="flatpickr" data-flatpickr-mode="range" value="2018-10-07 to 2018-10-15">
+                                        <label for="flatpickrSample02">Planned End</label>
+                                        <input id="PlannedEnd" type="text" class="form-control" placeholder="Flatpickr example" data-toggle="flatpickr" value="today">
                                     </div>
                                 </div>
                             </div>
@@ -392,7 +406,7 @@
                                 </div>
                                 <div class="col-lg-8 card-form__body card-body">
                                     <label>Course Description</label>
-                                    <div class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor">
+                                    <div id="DescriptionOfCourse" class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor">
                                         <h1>Moyai 🗿 moment</h1>
                                         <p>This editor is quite <strong>poggers</strong> and you too will <em>learn to love it</em></p>
                                         <p><br></p>
@@ -402,7 +416,7 @@
                             </div>
                         </div>
 
-                        <div class="card card-form">
+                        <!--<div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
                                     <p><strong class="headings-color">Uploading misc chizz</strong></p>
@@ -436,13 +450,13 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
-                                    <p><strong class="headings-color">Where do you belong to</strong></p>
-                                    <p class="text-muted">Alright children. This is where you say which section this belongs to. Don't be doo doo and lie, just be honest man, it's not worth it. </p>
+                                    <p><strong class="headings-color">What tag does your class fall under</strong></p>
+                                    <p class="text-muted">Alright teachers. This is where you say which section this belongs to. Don't be doo doo and lie, just be honest man, it's not worth it. </p>
                                 </div>
                                 <div class="col-lg-8 card-form__body card-body">
                                     <div class="form-group">
@@ -450,9 +464,10 @@
                                         <select id="select01" data-toggle="select" class="form-control">
                                             <option selected="">Explorator</option>
                                             <option>AIME Qualifier</option>
+                                            <option>Other</option>
                                         </select>
                                     </div>
-                                    <div class="form-group">
+                                    <!--<div class="form-group">
                                         <label for="select02">Teachers</label>
                                         <select id="select02" data-toggle="select" data-minimum-results-for-search="-1" class="form-control">
                                             <option data-avatar-src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg">
@@ -465,7 +480,7 @@
                                                 Green Doe
                                             </option>
                                         </select>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
