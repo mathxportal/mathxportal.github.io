@@ -11,14 +11,25 @@ var firebaseConfig = {
 
 var app = firebase.initializeApp(firebaseConfig);
 
-document.getElementById("SubmitClass").addEventListener('click', function(){
-    var CourseName = document.getElementById('CourseName')
-    var Description = document.getElementById('DescriptionOfCourse')
-    var PlannedStart = document.getElementById('PlannedStart')
-    var PlannedEnd = document.getElementById('PlannedEnd')
-    const SetCourseName = firebase.firestore().collection('Classes').doc(CourseName.value)
-    const SetCourseSettings = firebase.firestore().collection('ClassID').doc(CourseName.value).set({
-        Description: [Description.innerHTML],
-        PlannedStart: [PlannedStart.value],
+firebase.auth().onAuthStateChanged(async function(user){
+    let UUID = firebase.auth().currentUser.uid
+    document.getElementById("SubmitClass").addEventListener('click', function(){
+        var CourseName = document.getElementById('CourseName')
+        var Description = document.getElementById('DescriptionOfCourse')
+        var PlannedStart = document.getElementById('PlannedStart')
+        var PlannedEnd = document.getElementById('PlannedEnd')
+        const SetCourseName = firebase.firestore().collection('Classes').doc(CourseName.value)
+        const SetCourseSettings = firebase.firestore().collection('ClassID').doc(CourseName.value).set({
+            Description: [Description.innerHTML],
+            PlannedStart: [PlannedStart.value],
+        })
+        var Array = new Uint32Array(1);
+        window.crypto.getRandomValues(Array);
+        const SetCourseID = firebase.firestore().collection('ClassCodes').doc(CourseName.value).set({
+            ClassUUID: [Array + "420"]
+        })
+        const SetCourseTeacher = firebase.firestore().collection('SignedUpClasses').doc(UUID).set({
+            [CourseName.value]: "Teacher"
+        }, {merge: true})
     })
 })
