@@ -11,11 +11,6 @@ var firebaseConfig = {
 
 var app = firebase.initializeApp(firebaseConfig);
 
-// var CourseName = document.getElementById('CourseName')
-// var Description = document.getElementById('DescriptionOfCourse')
-// var PlannedStart = document.getElementById('PlannedStart')
-// var PlannedEnd = document.getElementById('PlannedEnd')
-
 document.getElementById("SubmitClass").addEventListener('click', function(){
     var CourseName = document.getElementById('CourseName')
     var Description = document.getElementById('DescriptionOfCourse')
