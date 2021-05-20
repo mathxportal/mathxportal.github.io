@@ -16,11 +16,15 @@ firebase.auth().onAuthStateChanged(async function(user){
     document.getElementById("SubmitClass").addEventListener('click', function(){
         var CourseName = document.getElementById('CourseName')
         var Description = document.getElementById('DescriptionOfCourse')
+        var RemoveDiv = Description.innerHTML.split("<div class=\"ql-editor\" data-gramm=\"false\" contenteditable=\"true\" data-placeholder=\"Quill WYSIWYG editor\">")
+        var RemoveDivfirst = RemoveDiv[1]
+        var DivlessDescription = RemoveDivfirst.split("</div>")
+        var FinalDescription = DivlessDescription[0]
         var PlannedStart = document.getElementById('PlannedStart')
         var PlannedEnd = document.getElementById('PlannedEnd')
         const SetCourseName = firebase.firestore().collection('Classes').doc(CourseName.value)
         const SetCourseSettings = firebase.firestore().collection('ClassID').doc(CourseName.value).set({
-            Description: [Description.innerHTML],
+            Description: [FinalDescription],
             PlannedStart: [PlannedStart.value],
         })
         var Array = new Uint32Array(1);
