@@ -30,37 +30,8 @@ const Assemble = firebase.firestore().collection('ClassID').doc(queries[1]).get(
     for (var y in doc.data()){
             // doc.data()[y] is what is contained, y is the name of the variable
             // Markdown but Sam does it
-        if (y == "Description") {
-            var othertext = doc.data()[y].split("***")
-            var w = ''
-            var Desvalue = ''
-            var bolded = ''
-    
-            for (w in othertext) {
-                if (w % 2 != 0) {
-                    bolded += `<b>${othertext[w]}</b>`
-                }
-            
-                else {
-                    bolded += othertext[w]
-                }
-            }
-
-            var othertext = bolded.split("~~~")
-            var italic = ''
-            var w2 = ''
-
-            for (w2 in othertext) {
-                if (w2 % 2 != 0) {
-                    italic += `<i>${othertext[w2]}</i>`
-                }
-
-                else {
-                    italic += othertext[w2]
-                }
-            }
-            Description.innerHTML = italic
+            if (y == "Description") {
+                Description.innerHTML = doc.data()[y]
         }
-    
     }
 })
