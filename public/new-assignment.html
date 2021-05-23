@@ -338,7 +338,8 @@
                     <div class="page__heading border-bottom">
                         <div class="container-fluid page__container">
                             <h1>Create a New Assignment</h1>
-                            <p class="lead text-light-gray mb-0">MATHx  Portal</p>
+                            <h2 id="Classname">Current Class: </h2>
+                            <p class="lead text-light-gray mb-0">MATHx Portal</p>
                         </div>
                     </div>
 
@@ -352,8 +353,8 @@
                                 <div class="col-lg-8 card-form__body card-body">
                                     <form>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Assignment Name:</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Assignment Name Here">
+                                            <!--<label for="exampleInputEmail1">Assignment Name:</label>-->
+                                            <input type="email" class="form-control" id="AssignmentName" placeholder="Name Here">
                                         </div>
                                     </form>
                                 </div>
@@ -366,8 +367,8 @@
                                     <p class="text-muted">Sit tight. This is the part where you'll need to do a LOT of writing. Well, I was partially joking, but this is where you'll be describing the assignment and what you're planning on covering. Gl lmao.</p>
                                 </div>
                                 <div class="col-lg-8 card-form__body card-body">
-                                    <label>Assignment Description</label>
-                                    <div class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor">
+                                    <!--<label>Assignment Description</label>-->
+                                    <div id= "Description" class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor">
                                         <h1>Moyai 🗿 moment</h1>
                                         <p>This editor is quite <strong>poggers</strong> and you too will <em>learn to love it</em></p>
                                         <p><br></p>
@@ -389,17 +390,13 @@
                                 <div class="col-lg-8 card-form__body card-body">
                                     <div class="form-group">
                                         <label for="flatpickrSample01">Date</label>
-                                        <input id="flatpickrSample01" type="text" class="form-control" placeholder="Flatpickr example" data-toggle="flatpickr" value="today">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="flatpickrSample02">Range</label>
-                                        <input id="flatpickrSample02" type="text" class="form-control" placeholder="Flatpickr range example" data-toggle="flatpickr" data-flatpickr-mode="range" value="2018-10-07 to 2018-10-15">
+                                        <input id="DueDate" type="text" class="form-control" placeholder="Flatpickr example" data-toggle="flatpickr" value="today">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card card-form">
+                        <!-- <div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
                                     <p><strong class="headings-color">Uploading misc chizz</strong></p>
@@ -433,23 +430,23 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
-                                    <p><strong class="headings-color">Where do you belong to</strong></p>
+                                    <p><strong class="headings-color">Tags</strong></p>
                                     <p class="text-muted">Alright children. This is where you say which section this belongs to. Don't be doo doo and lie, just be honest man, it's not worth it. </p>
                                 </div>
                                 <div class="col-lg-8 card-form__body card-body">
                                     <div class="form-group">
-                                        <label for="select01">Which class?</label>
+                                        <label for="select01"></label>
                                         <select id="select01" data-toggle="select" class="form-control">
-                                            <option selected="">Explorator</option>
-                                            <option>AIME Qualifier</option>
+                                            <option selected="">Daily classwork</option>
+                                            <option>Assessment</option>
                                         </select>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="select02">Teachers</label>
                                         <select id="select02" data-toggle="select" data-minimum-results-for-search="-1" class="form-control">
                                             <option data-avatar-src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg">
@@ -462,11 +459,11 @@
                                                 Green Doe
                                             </option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-block btn-sm btn-info" style="margin-top: 10px; margin-bottom: 10px; height: 50px;">Create Assignment</button>
+                        <button id="SubmitAssignment" type="button" class="btn btn-block btn-sm btn-info" style="margin-top: 10px; margin-bottom: 10px; height: 50px;">Create Assignment</button>
 
 
                         <!-- <div class="card card-form">
@@ -885,6 +882,10 @@
     <!-- Select2 -->
     <script src="assets/vendor/select2/select2.min.js"></script>
     <script src="assets/js/select2.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+    <script src="js/CreateAssignments.js"></script>
 
 </body>
 
