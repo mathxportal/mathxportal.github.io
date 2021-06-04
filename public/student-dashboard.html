@@ -347,8 +347,21 @@
 
 
                                     <ul class="list-group list-group-flush mb-0" style="z-index: initial;">
-
-                                        <div id="class"></div>
+                                        <a id="JoinClass" class="btn btn-light" style="padding: 20px;">Join a new class</a>
+                                        <div id="ClassArea" style="display: none">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="ClassName">Name of Class</label>
+                                                    <input class="form-control" id="ClassName" value="" placeholder="Enter the Name of the class">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="ClassID">Class ID</label>
+                                                    <input class="form-control" id="ClassID" value="" placeholder="Enter the Class ID">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary" id="JoinClassesbutton">Submit</button>
+                                            </form>
+                                        </div>
+                                    <div id="class"></div>
 
 
 
@@ -1214,6 +1227,7 @@
 
     
     <script src="js/ClassroomAccess.js"></script>
+    <script src="js/JoinClass.js"></script>
 
 </body>
 

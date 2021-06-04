@@ -70,6 +70,7 @@ const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get
         }
 
     }
+    console.log(classlist)
     classroom.innerHTML = classlist
     //navclass.innerHTML = navlist
     })
