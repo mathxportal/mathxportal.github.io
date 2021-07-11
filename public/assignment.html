@@ -334,10 +334,14 @@
 
                     <div class="container-fluid page__container">
                         <div class="card card-form">
-                            <div class="row no-gutters" style="margin:auto;">
+                            <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
-                                    <p><strong class="headings-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nesciunt magni voluptate soluta! Magni aliquid odio ut consequuntur ad nesciunt deserunt adipisci iste qui quae, optio atque quaerat reprehenderit magnam!</strong></p>
-                                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illum error perspiciatis in laboriosam quibusdam, dolores molestias quas eos ratione rerum aliquid iure dolorum numquam, autem deserunt aut. Temporibus, debitis.</p>
+                                    <h4>Assignment Description:</h4>
+                                </div>
+                            </div>
+                            <div class="row no-gutters" style="margin:auto;" id="AssigmentDescription">
+                                <div class="col-lg-4 card-body" >
+                                    
                                 </div>
                             </div>
                         </div>
@@ -349,11 +353,13 @@
                                     <p class="text-muted">Assignment Description</p>
                                 </div>
                                 <div class="col-lg-8 card-form__body card-body">
-                                    <label>Assignment Comments/Questions</label>
-                                    <div class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor">
+                                    <label>Assignment Comments/Questions/Answers to the teacher as you submit</label>
+                                    <div id="CommentsToTeacher" class="h-150" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor">
+                                        <div>
                                         <h1>What did the teacher tell the student?</h1>
                                         <p>Get shrekt!</p>
                                         <p><br></p>
+                                        </div>
                                     </div>
                                     <div class="fallback">
                                         <div class="custom-file">
@@ -387,7 +393,7 @@
                             </div>
                         </div>
 
-                        <a href="#"><button type="button" class="btn btn-block btn-primary" href="#">Submit Assignment</button></a>
+                        <a id="buttonforSubmitting"><button type="button" class="btn btn-block btn-primary">Submit Assignment</button></a>
 
 
                         <!-- <div class="card card-form">
@@ -807,6 +813,9 @@
     <script src="assets/vendor/select2/select2.min.js"></script>
     <script src="assets/js/select2.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
     <script src="js/AssignmentAssembler.js"></script>
 
 </body>

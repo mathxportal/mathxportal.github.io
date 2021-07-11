@@ -85,7 +85,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
                 }
                 var QueriesLink = queries[1]
 
-                var QString = "assignment.html" + "?" + QueriesLink + "?" + DueDate
+                var QString = "assignment.html" + "?" + QueriesLink + "?" + AssignmentName + "?" + DueDate
 
                 ClassesList += `
                 <li class="list-group-item d-flex">

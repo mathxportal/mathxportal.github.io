@@ -336,13 +336,13 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="fname">First name</label>
-                                                <input id="fname" type="text" class="form-control" placeholder="First name" value="Adrian">
+                                                <input id="fname" type="text" class="form-control" placeholder="First name" value="">
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="lname">Last name</label>
-                                                <input id="lname" type="text" class="form-control" placeholder="Last name" value="Demian">
+                                                <input id="lname" type="text" class="form-control" placeholder="Last name" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -350,27 +350,27 @@
                                         <label for="desc">Bio / Description</label>
                                         <textarea id="desc" rows="4" class="form-control" placeholder="Bio / description ..."></textarea>
                                     </div>
-                                    <div class="form-group">
+                                    <!--<div class="form-group">
                                         <label for="country">Country</label><br />
                                         <select id="country" class="custom-select w-auto">
                                             <option value="usa">United States</option>
                                             <option value="usa">Canada</option>
                                         </select>
                                         <small class="form-text text-muted">The country is not visible to other users.</small>
-                                    </div>
-                                    <div class="form-group">
+                                    </div>-->
+                                    <!--<div class="form-group">
                                         <label for="subscribe">Subscribe to newsletter</label><br>
                                         <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
                                             <input checked="" type="checkbox" id="subscribe" class="custom-control-input">
                                             <label class="custom-control-label" for="subscribe">Yes</label>
                                         </div>
                                         <label for="subscribe" class="mb-0">Yes</label>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card card-form">
+                        <!--<div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
                                     <p><strong class="headings-color">Update Your Password</strong></p>
@@ -397,9 +397,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
-                        <div class="card card-form">
+                        <!--<div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
                                     <p><strong class="headings-color">Profile Settings</strong></p>
@@ -464,9 +464,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="text-right mb-5">
-                            <a href="" class="btn btn-success">Save</a>
+                            <button id="SaveButton" class="btn btn-success">Save</button>
                         </div>
                     </div>
 
@@ -858,6 +858,13 @@
     <!-- Dropzone -->
     <script src="assets/vendor/dropzone.min.js"></script>
     <script src="assets/js/dropzone.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+    <script src="js/AccountEditor.js"></script>
+
 
 </body>
 
