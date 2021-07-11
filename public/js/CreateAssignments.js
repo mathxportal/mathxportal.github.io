@@ -33,7 +33,8 @@ firebase.auth().onAuthStateChanged(async function(user) {
             document.getElementById('SubmitAssignment').addEventListener('click', function(){
                 var Name = document.getElementById("AssignmentName").value
                 var Description = document.getElementById('Description')
-                var RemoveDiv = Description.innerHTML.split("<div class=\"ql-editor\" data-gramm=\"false\" contenteditable=\"true\" data-placeholder=\"Quill WYSIWYG editor\">")
+                var RemoveDiv = Description.innerHTML.split("<div class=\"ql-editor\" data-gramm=\"false\" data-placeholder=\"Quill WYSIWYG editor\" spellcheck=\"false\" contenteditable=\"true\">")
+                console.log(RemoveDiv)
                 var RemoveDivfirst = RemoveDiv[1]
                 var DivlessDescription = RemoveDivfirst.split("</div>")
                 var FinalDescription = DivlessDescription[0]

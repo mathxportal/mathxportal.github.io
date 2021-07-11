@@ -15,15 +15,19 @@ firebase.auth().onAuthStateChanged(async function(user){
     let UUID = firebase.auth().currentUser.uid
     document.getElementById("SubmitClass").addEventListener('click', function(){
         var CourseName = document.getElementById('CourseName')
+        var CreatorOfCourse = document.getElementById('CreatorOfCourse')
         var Description = document.getElementById('DescriptionOfCourse')
-        var RemoveDiv = Description.innerHTML.split("<div class=\"ql-editor\" data-gramm=\"false\" contenteditable=\"true\" data-placeholder=\"Quill WYSIWYG editor\">")
+        var RemoveDiv = Description.innerHTML.split("<div class=\"ql-editor\" data-gramm=\"false\" data-placeholder=\"Quill WYSIWYG editor\" spellcheck=\"false\" contenteditable=\"true\">")
+        console.log(RemoveDiv)
         var RemoveDivfirst = RemoveDiv[1]
+        console.log(RemoveDiv[1])
         var DivlessDescription = RemoveDivfirst.split("</div>")
         var FinalDescription = DivlessDescription[0]
         var PlannedStart = document.getElementById('PlannedStart')
         var PlannedEnd = document.getElementById('PlannedEnd')
         const SetCourseName = firebase.firestore().collection('Classes').doc(CourseName.value)
         const SetCourseSettings = firebase.firestore().collection('ClassID').doc(CourseName.value).set({
+            ClassCreator: [CreatorOfCourse.value],
             Description: [FinalDescription],
             PlannedStart: [PlannedStart.value],
         })

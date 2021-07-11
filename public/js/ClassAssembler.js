@@ -1,5 +1,8 @@
+
+
 const Description = document.getElementById('Description')
 const Title = document.getElementById('Title')
+const Teacher = document.getElementById('TeacherName')
 const AssignmentDiv = document.getElementById('AssignDiv')
 
 var firebaseConfig = {
@@ -32,6 +35,10 @@ const Assemble = firebase.firestore().collection('ClassID').doc(queries[1]).get(
             // Markdown but Sam does it
             if (y == "Description") {
                 Description.innerHTML = doc.data()[y]
+            }
+            if (y == "ClassCreator"){
+                console.log("Help")
+                Teacher.innerHTML = doc.data()[y]
         }
     }
 })
@@ -76,9 +83,13 @@ firebase.auth().onAuthStateChanged(async function(user) {
                         console.log(DueDate)
                     }
                 }
+                var QueriesLink = queries[1]
+
+                var QString = "assignment.html" + "?" + QueriesLink + "?" + DueDate
+
                 ClassesList += `
                 <li class="list-group-item d-flex">
-                <a href="assignment.html">${AssignmentName}</a>
+                <a href="${QString}">${AssignmentName}</a>
                 <div class="ml-auto d-flex align-items-center">
                     <span class="text-muted"><i class="material-icons icon-16pt icon-light">date_range</i>${DueDate}</span>
                 </div>

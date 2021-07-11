@@ -39,54 +39,56 @@ firebase.auth().onAuthStateChanged(async function(user){
     // }
 
 
-const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get().then(function(doc) {
-    console.log(doc.id, " => ", doc.data())
-    var x;
-    let classlist = '';
-    let navlist = '';
-    for (x in doc.data()) {
-        if (doc.data()[x] == "Teacher" || doc.data()[x] == "teacher" ) { 
-                    var queryString = "student-lessons.html" + "?" + UUID + "?" + x + "?" + doc.data()[x] + "?" + userinfo;
-        const li = `
-        <li class="list-group-item" style="z-index: initial;">
-        <div class="d-flex align-items-center">
-            <a href="#" class="mr-3">
-                <img src="assets/images/logos/vuejs.svg" alt="course" class="">
+    
+        const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get().then(function(doc) {
+        console.log(doc.id, " => ", doc.data())
+        var x;
+        let classlist = '';
+        let navlist = '';
+        for (x in doc.data()) {
+            if (doc.data()[x] == "Teacher" || doc.data()[x] == "teacher" ) { 
+                        var queryString = "student-lessons.html" + "?" + UUID + "?" + x + "?" + doc.data()[x] + "?" + userinfo;
+            const li = `
+            <li class="list-group-item" style="z-index: initial;">
+            <div class="d-flex align-items-center">
+                <a href="#" class="mr-3">
+                    <img src="assets/images/logos/vuejs.svg" alt="course" class="">
 
-            </a>
-            <div class="flex">
-                <a href="${queryString}" class="text-body"><strong>${x}</strong></a>
-                <div class="d-flex align-items-center">
-                </div>
-            </div>
-            <div class="dropdown ml-3">
-                <a href="#" class="dropdown-toggle text-muted" data-caret="false" data-toggle="dropdown">
-                    <i class="material-icons">more_vert</i>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#">View Stats</a>
-                    <a class="dropdown-item" href="#">Proceed</a>
-                    <a class="dropdown-item" href="#">Close</a>
+                <div class="flex">
+                    <a href="${queryString}" class="text-body"><strong>${x}</strong></a>
+                    <div class="d-flex align-items-center">
+                    </div>
+                </div>
+                <div class="dropdown ml-3">
+                    <a href="#" class="dropdown-toggle text-muted" data-caret="false" data-toggle="dropdown">
+                        <i class="material-icons">more_vert</i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">View Stats</a>
+                        <a class="dropdown-item" href="#">Proceed</a>
+                        <a class="dropdown-item" href="#">Close</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </li>
-        `;
-        const nav = `
-        <a href="${queryString}">${x}</a>
-        `
-        classlist += li;
-        navlist += nav;
-        console.log(x)
-        console.log(doc.data()[x])
-        }
+        </li>
+            `;
+            const nav = `
+            <a href="${queryString}">${x}</a>
+            `
+            classlist += li;
+            navlist += nav;
+            console.log(x)
+            console.log(doc.data()[x])
+            }
 
-        else {
-            continue;
-        }
+            else {
+                continue;
+            }
 
-    }
-    classroom.innerHTML = classlist
-    //navclass.innerHTML = navlist
+        }
+        classroom.innerHTML = classlist
+        //navclass.innerHTML = navlist
+        })
     })
-})})
+})
