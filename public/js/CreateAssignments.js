@@ -1,3 +1,20 @@
+var quill = new Quill('#editor-container', {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, 3, 4, 5, 6,  false] }],
+        ['bold', 'italic', 'underline','strike'],
+        ['image', 'code-block'],
+        ['link'],
+        [{ 'script': 'sub'}, { 'script': 'super' }],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        ['clean']
+      ]
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow'  // or 'bubble'
+  });
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyBTxAFBtZV3plHViPvJORHxs3YF2uOuPkI",
     authDomain: "mathxportal.firebaseapp.com",
@@ -32,17 +49,12 @@ firebase.auth().onAuthStateChanged(async function(user) {
         if (i > 1) {
             document.getElementById('SubmitAssignment').addEventListener('click', function(){
                 var Name = document.getElementById("AssignmentName").value
-                var Description = document.getElementById('Description')
-                var RemoveDiv = Description.innerHTML.split("<div class=\"ql-editor\" data-gramm=\"false\" data-placeholder=\"Quill WYSIWYG editor\" spellcheck=\"false\" contenteditable=\"true\">")
-                console.log(RemoveDiv)
-                var RemoveDivfirst = RemoveDiv[1]
-                var DivlessDescription = RemoveDivfirst.split("</div>")
-                var FinalDescription = DivlessDescription[0]
+                var Description = quill.container.innerHTML
                 var DueDate = document.getElementById('DueDate')
-                console.log(Name + FinalDescription.value + DueDate.value)
+                console.log(Name + Description.value + DueDate.value)
                 const AssignmentLink = firebase.firestore().collection("ClassID").doc(queryString).collection("Assignments").doc(Name).set({
                     assignmentName: [Name],
-                    assignmentDescription: [FinalDescription],
+                    assignmentDescription: [Description],
                     dueDate: [DueDate.value]
                 }).then(function(){
                     location.replace("author-dashboard.html")
