@@ -321,25 +321,19 @@
                         <div class="container-fluid page__container">
                             <div class="d-flex flex-column">
                                 <div class="mb-1">
-                                    <a href="#" class="badge badge-dark-gray text-white">Back to Courses</a>
+                                    <a href="#" class="badge badge-dark-gray text-white"></a>
                                 </div>
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="mr-3">
-                                        <img src="assets/images/logos/rails.white.svg" width="100" alt="rails logo">
+                                        
                                     </div>
                                     <div>
                                         <h1 class="text-white mb-0" id="Title"></h1>
-                                        <p class="lead text-white">This course will get you started with all the basics </p>
-                                        <div class="my-2 text-white d-flex">
-                                            <strong class="mr-4 "><i class="material-icons icon-16pt icon-light">weekend</i> Beginner</strong>
-                                            <strong><i class="material-icons icon-16pt icon-light">watch_later</i> 2:42</strong>
-                                        </div>
+                                        
                                     </div>
                                 </div>
 
-                                <div class="mt-1">
-                                    <a href="#" class="btn btn-light btn-rounded mr-2">Start Course</a><a href="#" class="btn btn-outline-light text-white btn-hover-primary btn-rounded"><i class="material-icons">local_activity</i> Add to list</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -409,7 +403,9 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div>                                        
+                        <script src='https://meet.jit.si/external_api.js'></script>
+                        <div id="meet"></div>
                     </div>
 
 
@@ -470,7 +466,7 @@
                                     <span class="sidebar-menu-text">Courses</span>
                                 </a>
                             </li>
-                            <li class="sidebar-menu-item">
+                            <!-- <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button" href="student-lessons.html">
                                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dns</i>
                                     <span class="sidebar-menu-text">Browse Lessons</span>
@@ -506,7 +502,7 @@
                                     <span class="sidebar-menu-text">Tickets</span>
                                     <span class="badge badge-warning badge-notifications ml-auto">NEW</span>
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button" href="edit-account.html">
                                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">settings</i>
@@ -530,10 +526,10 @@
                                 <a class="sidebar-menu-button" href="author-dashboard.html">
                                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
                                     <span class="sidebar-menu-text">Dashboard</span>
-                                    <span class="badge badge-warning rounded-circle badge-notifications ml-auto">8</span>
+                                    <span class="badge badge-warning rounded-circle badge-notifications ml-auto"></span>
                                 </a>
                             </li>
-                            <li class="sidebar-menu-item">
+                            <!-- <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button" href="author-courses.html">
                                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">layers</i>
                                     <span class="sidebar-menu-text">Courses</span>
@@ -563,7 +559,7 @@
                                     <span class="sidebar-menu-text">Tickets</span>
                                     <span class="badge badge-warning badge-notifications ml-auto">NEW</span>
                                 </a>
-                            </li>
+                            </li> -->
 
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button" href="login.html">
@@ -574,23 +570,23 @@
                         </ul>
                     </div>
 
-                    <div class="sidebar-heading">Admin</div>
-                    <div class="sidebar-block p-0">
-                        <ul class="sidebar-menu mt-0">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="admin-dashboard.html">
-                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
-                                    <span class="sidebar-menu-text">Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="admin-trello.html">
-                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">touch_app</i>
-                                    <span class="sidebar-menu-text">Trello</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                </div>
+                <!-- <div class="sidebar-heading">Admin</div>
+                <div class="sidebar-block p-0">
+                    <ul class="sidebar-menu mt-0">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="admin-dashboard.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
+                                <span class="sidebar-menu-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="admin-trello.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">touch_app</i>
+                                <span class="sidebar-menu-text">Trello</span>
+                            </a>
+                        </li>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -800,8 +796,9 @@
 	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
 
-    <script src="js/ClassAssembler.js"></script>
 
+    <script src="js/ClassAssembler.js"></script>
+    <script src="js/Jitsi.js"></script>
 
 
 </body>
