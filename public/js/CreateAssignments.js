@@ -54,7 +54,7 @@ firebase.auth().onAuthStateChanged(async function (user) {
           .getElementById("SubmitAssignment")
           .addEventListener("click", function () {
             var Name = document.getElementById("AssignmentName").value;
-            var Description = quill.container.innerHTML.split("<div class=\"ql-tooltip ql-hidden\" style=\"user-select: auto;\">")[0];
+            var Description = quill.root.innerHTML;
             var DueDate = document.getElementById("DueDate");
             console.log(Name + Description.value + DueDate.value);
             const AssignmentLink = firebase

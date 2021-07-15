@@ -1,3 +1,20 @@
+var quill = new Quill("#editor-container", {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, 3, 4, 5, 6, false] }],
+        ["bold", "italic", "underline", "strike"],
+        ["image", "code-block"],
+        ["link"],
+        [{ script: "sub" }, { script: "super" }],
+        [{ list: "ordered" }, { list: "bullet" }],
+        ["clean"],
+      ],
+    },
+    placeholder: "Compose an epic...",
+    theme: "snow", // or 'bubble'
+  });
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyBTxAFBtZV3plHViPvJORHxs3YF2uOuPkI",
     authDomain: "mathxportal.firebaseapp.com",
@@ -16,19 +33,13 @@ firebase.auth().onAuthStateChanged(async function(user){
     document.getElementById("SubmitClass").addEventListener('click', function(){
         var CourseName = document.getElementById('CourseName')
         var CreatorOfCourse = document.getElementById('CreatorOfCourse')
-        var Description = document.getElementById('DescriptionOfCourse')
-        var RemoveDiv = Description.innerHTML.split("<div class=\"ql-editor\" data-gramm=\"false\" data-placeholder=\"Quill WYSIWYG editor\" spellcheck=\"false\" contenteditable=\"true\">")
-        console.log(RemoveDiv)
-        var RemoveDivfirst = RemoveDiv[1]
-        console.log(RemoveDiv[1])
-        var DivlessDescription = RemoveDivfirst.split("</div>")
-        var FinalDescription = DivlessDescription[0]
+        var Description = quill.root.innerHTML
         var PlannedStart = document.getElementById('PlannedStart')
         var PlannedEnd = document.getElementById('PlannedEnd')
         const SetCourseName = firebase.firestore().collection('Classes').doc(CourseName.value)
         const SetCourseSettings = firebase.firestore().collection('ClassID').doc(CourseName.value).set({
             ClassCreator: [CreatorOfCourse.value],
-            Description: [FinalDescription],
+            Description: [Description],
             PlannedStart: [PlannedStart.value],
         })
         var Array = new Uint32Array(1);

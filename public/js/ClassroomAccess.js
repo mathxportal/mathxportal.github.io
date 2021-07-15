@@ -10,7 +10,7 @@ var firebaseConfig = {
     messagingSenderId: "438926262255",
     appId: "1:438926262255:web:08ab5e434d53a90b6c001a",
     measurementId: "G-MN57T4VBQL"
-  };
+};
 
 
 var Url = decodeURIComponent(window.location.search)
@@ -18,20 +18,20 @@ userinfo = Url.substring(1);
 
 var app = firebase.initializeApp(firebaseConfig);
 
-const setupUI = (user) => {}
+const setupUI = (user) => { }
 
-firebase.auth().onAuthStateChanged(async function(user){
+firebase.auth().onAuthStateChanged(async function (user) {
     let UUID = firebase.auth().currentUser.uid
-  
-const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get().then(function(doc) {
-    console.log(doc.id, " => ", doc.data())
-    var x;
-    let classlist = '';
-    let navlist = '';
-    for (x in doc.data()) {
-        if (doc.data()[x] == "Student" || doc.data()[x] == "student" ) { 
-                    var queryString = "student-lessons.html" + "?" + UUID + "?" + x + "?" + doc.data()[x] + "?" + userinfo;
-        const li = `
+
+    const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get().then(function (doc) {
+        console.log(doc.id, " => ", doc.data())
+        var x;
+        let classlist = '';
+        let navlist = '';
+        for (x in doc.data()) {
+            if (doc.data()[x] == "Student" || doc.data()[x] == "student") {
+                var queryString = "student-lessons.html" + "?" + UUID + "?" + x + "?" + doc.data()[x] + "?" + userinfo;
+                const li = `
         <li class="list-group-item" style="z-index: initial;">
         <div class="d-flex align-items-center">
             <a href="#" class="mr-3">
@@ -56,22 +56,22 @@ const classes = firebase.firestore().collection('SignedUpClasses').doc(UUID).get
         </div>
     </li>
         `;
-        const nav = `
+                const nav = `
         <a href="${queryString}">${x}</a>
         `
-        classlist += li;
-        navlist += nav;
-        console.log(x)
-        console.log(doc.data()[x])
-        }
+                classlist += li;
+                navlist += nav;
+                console.log(x)
+                console.log(doc.data()[x])
+            }
 
-        else {
-            continue;
-        }
+            else {
+                continue;
+            }
 
-    }
-    console.log(classlist)
-    classroom.innerHTML = classlist
-    //navclass.innerHTML = navlist
+        }
+        console.log(classlist)
+        classroom.innerHTML = classlist
+        //navclass.innerHTML = navlist
     })
 })

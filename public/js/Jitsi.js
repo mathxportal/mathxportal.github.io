@@ -11,4 +11,5 @@ const options = {
     height: 700,
     parentNode: document.querySelector('#meet')
 };
+
 const api = new JitsiMeetExternalAPI(domain, options);
